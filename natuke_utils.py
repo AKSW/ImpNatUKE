@@ -127,12 +127,12 @@ def get_knn_data(G, node, embedding_feature: str = 'f'):
             knn_nodes.append(node)
     return pd.DataFrame(knn_data), pd.DataFrame(knn_nodes)
 
-def run_knn(k, G_restored, row, knn_data, knn_nodes, node_feature='node', embedding_feature='f'):
+def run_knn(k, G_restored, row, knn_data, knn_nodes, node_feature='node', embedding_feature='f', emb_dim=4608):
     if k == -1:
         k = knn_data.shape[0]
     knn = NearestNeighbors(n_neighbors=k, metric='cosine')
     knn.fit(knn_data)
-    indice = knn.kneighbors(G_restored.nodes[row[node_feature]][embedding_feature].reshape(-1, 512), return_distance=False)
+    indice = knn.kneighbors(G_restored.nodes[row[node_feature]][embedding_feature].reshape(-1, emb_dim), return_distance=False)
     return [knn_nodes[0].iloc[indice[0][i]] for i in range(k)]
 
 import multiprocess
@@ -186,6 +186,57 @@ def restore_hin(G, cutted_dict, n_jobs=-1, k=-1, node_feature='node', neighbor_f
             for job in range(n_jobs):
                 for res in return_dict[thread_key + str(job)]:
                     restored_dict[thread_key].append(res)
+    return pd.DataFrame(restored_dict)
+
+def restore_hin_split(G, cutted_df, edge_group, n_jobs=-1, k=-1, node_feature='node', neighbor_feature='neighbor', group_feature='group', embedding_feature='f'):
+    # function
+    def process(start, end, G, df, edge_group, return_dict, thread_id):
+        value_thread = df.loc[start:(end-1)]
+        restored_dict_thread = {'true': [], 'restored': [], 'edge_type': []}
+        for _, row in tqdm(value_thread.iterrows(), total=value_thread.shape[0]):
+            edge_to_add = edge_group.split('_')
+            edge_to_add[0] = row[node_feature]
+            edge_to_add = [row[node_feature] if e == G.nodes[row[node_feature]][group_feature] and row[node_feature] != edge_to_add[0] else e for e in edge_to_add]
+            knn_data, knn_nodes = get_knn_data(G, row[node_feature], embedding_feature=embedding_feature)
+            knn_nodes['type'] = knn_nodes[0].apply(lambda x: G.nodes[x][group_feature])
+            knn_data = knn_data[knn_nodes['type'].isin(edge_to_add)]
+            knn_nodes = knn_nodes[knn_nodes['type'].isin(edge_to_add)]
+            edge_to_add[1] = run_knn(k, G, row, knn_data, knn_nodes, embedding_feature=embedding_feature)
+            restored_dict_thread['true'].append([row[node_feature], row[neighbor_feature]])
+            restored_dict_thread['restored'].append(edge_to_add)
+            restored_dict_thread['edge_type'].append(edge_group)
+        for key in restored_dict_thread.keys():
+            _key = key + str(thread_id)
+            return_dict[_key] = (restored_dict_thread[key])
+    # split threads
+    def split_processing(n_jobs, G, df, edge_group, return_dict):
+        split_size = round(len(df) / n_jobs)
+        threads = []                                                                
+        for i in range(n_jobs):                                                 
+            # determine the indices of the list this thread will handle             
+            start = i * split_size                                                  
+            # special case on the last chunk to account for uneven splits           
+            end = len(df) if i+1 == n_jobs else (i+1) * split_size                
+            # create the thread
+            threads.append(                                                         
+                multiprocess.Process(target=process, args=(start, end, G, df, edge_group, return_dict, i)))
+            threads[-1].start() # start the thread we just created                  
+
+        # wait for all threads to finish                                            
+        for t in threads:
+            t.join()
+
+    if n_jobs == -1:
+        n_jobs = multiprocess.cpu_count()
+    restored_dict = {'true': [], 'restored': [], 'edge_type': []}
+    return_dict = multiprocess.Manager().dict()
+
+    split_processing(n_jobs, G, cutted_df, edge_group, return_dict)
+    return_dict = dict(return_dict)
+    for thread_key in restored_dict.keys():
+        for job in range(n_jobs):
+            for res in return_dict[thread_key + str(job)]:
+                restored_dict[thread_key].append(res)
     return pd.DataFrame(restored_dict)
 
 def ml_restore_hin(G, train, test, edge_group='doi_bioActivity', neighbor_feature='neighbor', node_feature='node', embedding_feature='f', min_delta=0.00001, patience=10, epochs=1000, embedding_size=512):
