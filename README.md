@@ -104,424 +104,536 @@ dynamic_stages = ['1st', '2nd', '3rd', '4th']
 
 ## Benchmark
 
-The problem of knowledge extraction from unstructured data sources is that authors may use different words or methods to describe the same thing. Using rule-based information extraction algorithms is therefore very challenging. In this work, we propose a benchmark and evaluate different ML embeddings to the task of unsupervised knowledge extraction. We design the evaluation as such that we measure the performance of each approach when inserting randomly selected portions of a crowd-sourced training data set. 
-
-In order to simulate a scenario whereas new training data is constantly added to the model, we removed all nodes that originated from the crowd-sourced data set out of the KG, leaving the papers connected only to their topics. The first train/test split consists of a 20/80% division, and for other stages, the train split is increased by 20% until it reaches an 80/20% division. We also enriched our KG with topics related to the papers using BERTopic [4]. In Figure 1 we present a visualization of the evaluation stages. In our benchmark, we evaluate the accuracy of each approach in predicting the resource from different chemical compound properties using hits@k. The metric hits@k calculates and average of how many predictions achieve top k rankings.
-
-**Figure 1 - evaluation stages**
-
-![evaluation_stages](https://github.com/AKSW/natuke/blob/main/images/dynamic_flow.png?raw=true)
+More information about the NatUKE benchmark is available at https://github.com/aksw/natuke#benchmark.
 
 ### Data
 
-The data set used for evaluation as well as training was generated from hundreds of peer reviewed scientific articles where the information on more than 2,000 natural products were extracted. The data set was built manually by chemistry specialists that read the articles annotating four relevant properties associated with each natural product discussed in the paper: (I) metabolic class and (II) bioactivity, (III) species from where natural products were extracted, and (IV) collection site of this species. 
-
-The dataset can be found in different formats:
-
-- Linked Data: [http://nubbekg.aksw.org](http://nubbekg.aksw.org)
-- Spreadsheet: [https://tinyurl.com/2p99u3jv](https://tinyurl.com/2p99u3jv)
-
-For the benchmark data was extracted from the linked data endpoint and then joined with the spreadsheet for missing values, with the following SPARQL query:
-
-```
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX nubbe: <http://nubbe.db/>
-PREFIX nubbeprop: <http://nubbe.db/property/>
-PREFIX nubbeclass: <http://nubbe.db/class/>
-
-SELECT DISTINCT 
-  ?doi ?bioActivity ?collectionSpecie ?collectionSite ?collectionType ?molType 
-  ?molecularMass ?monoisotropicMass ?cLogP ?tpsa?numberOfLipinskiViolations 
-  ?numberOfH_bondAcceptors ?numberOfH_bondDonors ?numberOfRotableBonds 
-  ?molecularVolume ?smile
-WHERE {
-  ?data     nubbeprop:doi                           ?doi                          .
-  OPTIONAL {
-    ?data   nubbeprop:biologicalActivity            ?bioActivity                  ;
-            nubbeprop:collectionSpecie              ?collectionSpecie             ;
-            nubbeprop:collectionSite                ?collectionSite               ;
-            nubbeprop:collectionType                ?collectionType               ;
-            rdf:type                                ?molType                      ;
-            nubbeprop:molecularMass                 ?molecularMass                ;
-            nubbeprop:monoisotropicMass             ?monoisotropicMass            ;
-            nubbeprop:cLogP                         ?cLogP                        ;
-            nubbeprop:tpsa                          ?tpsa                         ;
-            nubbeprop:numberOfLipinskiViolations    ?numberOfLipinskiViolations   ;
-            nubbeprop:numberOfH-bondAcceptors       ?numberOfH_bondAcceptors      ;
-            nubbeprop:numberOfH-bondDonors          ?numberOfH_bondDonors         ;
-            nubbeprop:numberOfRotableBonds          ?numberOfRotableBonds         ;
-            nubbeprop:molecularVolume               ?molecularVolume              ;
-            nubbeprop:smile                         ?smile                        .
-  }
-}
-```
+More information about the dataset used for evaluation is available at https://github.com/aksw/natuke#data.
 
 ### Models
 
-We compare four different unsupervised graph embedding methods for our knowledge extraction task: (1) DeepWalk is an unsupervised graph embedding method that uses random walks to sample a training data set for a skipgram architecture; (2) Node2Vec extends DeepWalk method to allow more control on the random walks; (3) Metapath2Vec is another extension from DeepWalk that transforms the random walks into meta-path based walks; and Embedding Propagation on Heterogeneous Networks (EPHEN) is an embedding propagation method that uses a regularization function to distribute an initial BERT embedding on a KG, meaning that it considers both text and structured data in an unsupervised scenario.
+More information about the models evaluated are available at https://github.com/aksw/natuke#models.
 
 ## Results
 
-We use NubbeDB ontology (https://github.com/AKSW/dinobbio/tree/main/ontology) for property prediction. We extract five different properties: (1) name, (2) bioactivity, (3) specie, (4) collection site, and (5) isolation type. We use different values of k proportionally to the property-value prediction difficulty. For instance, it is significantly more challenging to predict the right natural product name than it is to predict the isolation type because there are considerable fewer exemplars in the traning data set for natural product than there is for isolation type. For that we evaluated with different k from 1 to 50, considering values multiples of 5.
+### Original NatUKE
 
-### Graphs
+Results from the original NatUKE benchmark are available at https://github.com/aksw/natuke#results.
 
-The graphs show the results from experiments extracting five different natural product properties from biochemical academic papers. Each graph presents different property extraction and values of k to the hits@k metric: (1) name, k = 50; (2) bioactivity, k = 5; (3) specie, k = 50; (4) collection site, k = 20; and (5) isolation type, k = 1. The final k value for each extraction is defined either when a score higher than 0.50 is achieved at any evaluation stage or the upper limit of k = 50. The final k value for each extraction is defined either when a score higher than 0.50 is achieved at any evaluation stage or the upper limit of k = 50.
+### ImpNatUKE
 
-**Graph 1 - compound name extraction**
+Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model DistilBERT:
 
-![compound_name](https://github.com/AKSW/natuke/blob/main/images/hits_execution_times_doi_name.png?raw=true)
-
-**Graph 2 - bioactivity extraction**
-
-![bioactivity](https://github.com/AKSW/natuke/blob/main/images/hits_execution_times_doi_bioActivity.png?raw=true)
-
-**Graph 3 - collection specie extraction**
-
-![specie](https://github.com/AKSW/natuke/blob/main/images/hits_execution_times_doi_collectionSpecie.png?raw=true)
-
-**Graph 4 - collection site extraction**
-
-![collection_site](https://github.com/AKSW/natuke/blob/main/images/hits_execution_times_doi_collectionSite.png?raw=true)
-
-**Graph 5 - collection type extraction**
-
-![extraction_type](https://github.com/AKSW/natuke/blob/main/images/hits_execution_times_doi_collectionType.png?raw=true)
-
-### Tables 
-
-Table 1 shows the results from experiments extracting five different natural product properties from biochemical academic papers. They are presented on different values of k to the hits@k metric: (1) name, k = 50; (2) bioactivity, k = 5; (3) specie, k = 50; (4) collection site, k = 20; and (5) isolation type, k = 1. The final k value for each extraction is defined either when a score higher than 0.50 is achieved at any evaluation stage or the upper limit of k = 50.
-
-Table 2 shows the results from experiments extracting five different natural product properties from biochemical academic papers. They are presented on different values of k to the hits@k metric: (1) name, k = 50; (2) bioactivity, k = 1; (3) specie, k = 20; (4) collection site, k = 5; and (5) isolation type, k = 1. The final k value for each extraction is defined either when a score higher than 0.20 is achieved at any evaluation stage or the upper limit of k = 50. 
-
-**Table 1**
-
-Results table for extracting: chemical compound (C), bioactivity (B), specie (S), collection site (L), and isolation type (T). Performance metric with the average and standard deviation of the metric hits@k and k is respectively: 50, 5, 50, 20, and 1.
-
-<table class="tg">
-<thead>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
   <tr>
-    <th class="tg-0pky">Property</th>
-    <th class="tg-0pky">Evaluation Stage</th>
-    <th class="tg-0pky">DeepWalk</th>
-    <th class="tg-0pky">Node2vec</th>
-    <th class="tg-0pky">Metapath2Vec</th>
-    <th class="tg-0pky">EPHEN</th>
-  </tr>
-</thead>
+    <th class="tg-7btt" colspan="14">DistilBERT</th>
+  </tr></thead>
 <tbody>
   <tr>
-    <td class="tg-0pky" rowspan="4">C</td>
-    <td class="tg-0pky">1st</td>
-    <td class="tg-0pky">0.08 ± 0.01</td>
-    <td class="tg-0pky">0.08 ± 0.01</td>
-    <td class="tg-0pky">0.10 ± 0.01</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-7btt" colspan="4">PyMuPdf</td>
+    <td class="tg-c3ow" colspan="4"><span style="font-weight:bold">GROBID</span></td>
+    <td class="tg-amwm" colspan="4">Nougat</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj"></td>
+    <td class="tg-7btt">k</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-7btt">4th</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-amwm">4th</td>
+    <td class="tg-amwm">1st</td>
+    <td class="tg-amwm">2nd</td>
+    <td class="tg-amwm">3rd</td>
+    <td class="tg-amwm">4th</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">C</td>
+    <td class="tg-c3ow">50</td>
     <td class="tg-0pky">0.09 ± 0.01</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2nd</td>
-    <td class="tg-0pky">0.01 ± 0.01</td>
-    <td class="tg-0pky">0.00 ± 0.01</td>
-    <td class="tg-0pky">0.08 ± 0.02</td>
     <td class="tg-0pky">0.02 ± 0.01</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3rd</td>
-    <td class="tg-0pky">0.01 ± 0.01</td>
-    <td class="tg-0pky">0.01 ± 0.01</td>
-    <td class="tg-0pky">0.09 ± 0.03</td>
     <td class="tg-0pky">0.03 ± 0.02</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">4th</td>
-    <td class="tg-0pky">0.00 ± 0.00</td>
-    <td class="tg-0pky">0.00 ± 0.00</td>
-    <td class="tg-0pky">0.20 ± 0.05</td>
     <td class="tg-0pky">0.04 ± 0.05</td>
+    <td class="tg-0pky">0.09 ± 0.01</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0lax">0.00 ± 0.00</td>
+    <td class="tg-0lax">0.09 ± 0.01</td>
+    <td class="tg-0lax">0.00 ± 0.00</td>
+    <td class="tg-0lax">0.00 ± 0.00</td>
+    <td class="tg-0lax">0.00 ± 0.00</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="4">B</td>
-    <td class="tg-0pky">1st</td>
-    <td class="tg-0pky">0.41 ± 0.08</td>
-    <td class="tg-0pky">0.41 ± 0.07</td>
-    <td class="tg-0pky">0.27 ± 0.03</td>
-    <td class="tg-0pky">0.55 ± 0.06</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2nd</td>
-    <td class="tg-0pky">0.12 ± 0.02</td>
-    <td class="tg-0pky">0.07 ± 0.03</td>
-    <td class="tg-0pky">0.17 ± 0.06</td>
+    <td class="tg-uzvj" rowspan="2">B</td>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-73oq">0.55 ± 0.06</td>
     <td class="tg-0pky">0.57 ± 0.07</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3rd</td>
-    <td class="tg-0pky">0.10 ± 0.03</td>
-    <td class="tg-0pky">0.03 ± 0.03</td>
-    <td class="tg-0pky">0.13 ± 0.04</td>
     <td class="tg-0pky">0.60 ± 0.08</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">4th</td>
-    <td class="tg-0pky">0.07 ± 0.04</td>
-    <td class="tg-0pky">0.03 ± 0.03</td>
-    <td class="tg-0pky">0.12 ± 0.06</td>
     <td class="tg-0pky">0.64 ± 0.07</td>
+    <td class="tg-0pky">0.58 ± 0.05</td>
+    <td class="tg-0pky">0.64 ± 0.03</td>
+    <td class="tg-0pky">0.69 ± 0.06</td>
+    <td class="tg-0lax">0.73 ± 0.08</td>
+    <td class="tg-0lax">0.59 ± 0.06</td>
+    <td class="tg-0lax">0.66 ± 0.05</td>
+    <td class="tg-0lax">0.69 ± 0.05</td>
+    <td class="tg-0lax">0.71 ± 0.11</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="4">S</td>
-    <td class="tg-0pky">1st</td>
-    <td class="tg-0pky">0.37 ± 0.04</td>
-    <td class="tg-0pky">0.36 ± 0.04</td>
-    <td class="tg-0pky">0.40 ± 0.03</td>
-    <td class="tg-0pky">0.36 ± 0.04</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2nd</td>
-    <td class="tg-0pky">0.24 ± 0.03</td>
-    <td class="tg-0pky">0.22 ± 0.03</td>
-    <td class="tg-0pky">0.41 ± 0.06</td>
-    <td class="tg-0pky">0.24 ± 0.03</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3rd</td>
-    <td class="tg-0pky">0.27 ± 0.07</td>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-0pky">0.17 ± 0.05</td>
+    <td class="tg-0pky">0.19 ± 0.05</td>
+    <td class="tg-0pky">0.24 ± 0.06</td>
     <td class="tg-0pky">0.25 ± 0.06</td>
-    <td class="tg-0pky">0.42 ± 0.04</td>
+    <td class="tg-0pky">0.19 ± 0.02</td>
+    <td class="tg-0pky">0.23 ± 0.03</td>
+    <td class="tg-0pky">0.28 ± 0.06</td>
+    <td class="tg-0lax">0.35 ± 0.10</td>
+    <td class="tg-0lax">0.19 ± 0.02</td>
+    <td class="tg-0lax">0.25 ± 0.04</td>
+    <td class="tg-0lax">0.30 ± 0.06</td>
+    <td class="tg-0lax">0.33 ± 0.10</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="2">S</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-0pky">0.36 ± 0.04</td>
+    <td class="tg-0pky">0.24 ± 0.03</td>
     <td class="tg-0pky">0.29 ± 0.07</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">4th</td>
-    <td class="tg-0pky">0.25 ± 0.10</td>
-    <td class="tg-0pky">0.24 ± 0.07</td>
-    <td class="tg-0pky">0.44 ± 0.12</td>
     <td class="tg-0pky">0.30 ± 0.06</td>
+    <td class="tg-0pky">0.34 ± 0.03</td>
+    <td class="tg-0pky">0.24 ± 0.03</td>
+    <td class="tg-0pky">0.29 ± 0.06</td>
+    <td class="tg-0lax">0.34 ± 0.10</td>
+    <td class="tg-0lax">0.34 ± 0.03</td>
+    <td class="tg-0lax">0.23 ± 0.03</td>
+    <td class="tg-0lax">0.29 ± 0.05</td>
+    <td class="tg-0lax">0.30 ± 0.10</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="4">L</td>
-    <td class="tg-0pky">1st</td>
-    <td class="tg-0pky">0.56 ± 0.06</td>
-    <td class="tg-0pky">0.57 ± 0.05</td>
-    <td class="tg-0pky">0.40 ± 0.05</td>
+    <td class="tg-c3ow">20</td>
+    <td class="tg-0pky">0.10 ± 0.02</td>
+    <td class="tg-0pky">0.15 ± 0.03</td>
+    <td class="tg-0pky">0.19 ± 0.05</td>
+    <td class="tg-0pky">0.22 ± 0.07</td>
+    <td class="tg-0pky">0.10 ± 0.03</td>
+    <td class="tg-0pky">0.17 ± 0.03</td>
+    <td class="tg-0pky">0.22 ± 0.04</td>
+    <td class="tg-0lax">0.28 ± 0.07</td>
+    <td class="tg-0lax">0.11 ± 0.03</td>
+    <td class="tg-0lax">0.18 ± 0.03</td>
+    <td class="tg-0lax">0.21 ± 0.03</td>
+    <td class="tg-0lax">0.25 ± 0.09</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="2">L</td>
+    <td class="tg-c3ow">20</td>
     <td class="tg-0pky">0.53 ± 0.03</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2nd</td>
-    <td class="tg-0pky">0.41 ± 0.05</td>
-    <td class="tg-0pky">0.36 ± 0.08</td>
-    <td class="tg-0pky">0.42 ± 0.04</td>
     <td class="tg-0pky">0.52 ± 0.06</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3rd</td>
-    <td class="tg-0pky">0.38 ± 0.06</td>
-    <td class="tg-0pky">0.28 ± 0.04</td>
-    <td class="tg-0pky">0.42 ± 0.08</td>
     <td class="tg-0pky">0.55 ± 0.04</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">4th</td>
-    <td class="tg-0pky">0.29 ± 0.05</td>
-    <td class="tg-0pky">0.23 ± 0.10</td>
-    <td class="tg-0pky">0.40 ± 0.12</td>
     <td class="tg-0pky">0.55 ± 0.06</td>
+    <td class="tg-0pky">0.56 ± 0.04</td>
+    <td class="tg-0pky">0.62 ± 0.03</td>
+    <td class="tg-0pky">0.62 ± 0.05</td>
+    <td class="tg-0lax">0.62 ± 0.08</td>
+    <td class="tg-0lax">0.56 ± 0.04</td>
+    <td class="tg-0lax">0.62 ± 0.03</td>
+    <td class="tg-0lax">0.63 ± 0.05</td>
+    <td class="tg-0lax">0.65 ± 0.08</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="4">T</td>
-    <td class="tg-0pky">1st</td>
-    <td class="tg-0pky">0.25 ± 0.09</td>
-    <td class="tg-0pky">0.10 ± 0.05</td>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-0pky">0.26 ± 0.04</td>
+    <td class="tg-0pky">0.29 ± 0.05</td>
+    <td class="tg-0pky">0.30 ± 0.07</td>
+    <td class="tg-0pky">0.27 ± 0.07</td>
     <td class="tg-0pky">0.28 ± 0.04</td>
+    <td class="tg-0pky">0.35 ± 0.05</td>
+    <td class="tg-0pky">0.36 ± 0.04</td>
+    <td class="tg-0lax">0.35 ± 0.08</td>
+    <td class="tg-0lax">0.27 ± 0.05</td>
+    <td class="tg-0lax">0.31 ± 0.04</td>
+    <td class="tg-0lax">0.35 ± 0.08</td>
+    <td class="tg-0lax">0.38 ± 0.09</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">T</td>
+    <td class="tg-c3ow">1</td>
     <td class="tg-0pky">0.71 ± 0.04</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2nd</td>
-    <td class="tg-0pky">0.14 ± 0.08</td>
-    <td class="tg-0pky">0.07 ± 0.06</td>
-    <td class="tg-0pky">0.22 ± 0.08</td>
     <td class="tg-0pky">0.66 ± 0.10</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3rd</td>
-    <td class="tg-0pky">0.14 ± 0.09</td>
-    <td class="tg-0pky">0.05 ± 0.04</td>
-    <td class="tg-0pky">0.19 ± 0.04</td>
     <td class="tg-0pky">0.75 ± 0.10</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">4th</td>
-    <td class="tg-0pky">0.09 ± 0.05</td>
-    <td class="tg-0pky">0.01 ± 0.02</td>
-    <td class="tg-0pky">0.19 ± 0.06</td>
     <td class="tg-0pky">0.75 ± 0.11</td>
+    <td class="tg-0pky">0.77 ± 0.02</td>
+    <td class="tg-0pky">0.75 ± 0.04</td>
+    <td class="tg-0pky">0.76 ± 0.05</td>
+    <td class="tg-0lax">0.77 ± 0.06</td>
+    <td class="tg-0lax">0.78 ± 0.01</td>
+    <td class="tg-0lax">0.78 ± 0.04</td>
+    <td class="tg-0lax">0.78 ± 0.05</td>
+    <td class="tg-0lax">0.80 ± 0.09</td>
   </tr>
-</tbody>
-</table>
+</tbody></table>
 
-**Table 2**
+Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model llama-3.1.:
 
-Results table for extracting: chemical compound (C), bioactivity (B), specie (S), collection site (L), and isolation type (T). Performance metric with the average and standard deviation of the metric hits@k and k is respectively: 50, 1, 20, 5, and 1.
-
-<table class="tg">
-<thead>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
   <tr>
-    <th class="tg-0lax">Property</th>
-    <th class="tg-0lax">Evaluation Stage</th>
-    <th class="tg-0lax">DeepWalk</th>
-    <th class="tg-0lax">Node2vec</th>
-    <th class="tg-0lax">Metapath2Vec</th>
-    <th class="tg-0lax">EPHEN</th>
-  </tr>
-</thead>
+    <th class="tg-7btt" colspan="14">llama-3.1</th>
+  </tr></thead>
 <tbody>
   <tr>
-    <td class="tg-0lax" rowspan="4">C</td>
-    <td class="tg-0lax">1st</td>
-    <td class="tg-0lax">0.08 ± 0.01</td>
-    <td class="tg-0lax">0.08 ± 0.01</td>
-    <td class="tg-0lax">0.10 ± 0.01</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-7btt" colspan="4">PyMuPdf</td>
+    <td class="tg-c3ow" colspan="4"><span style="font-weight:bold">GROBID</span></td>
+    <td class="tg-amwm" colspan="4">Nougat</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj"></td>
+    <td class="tg-7btt">k</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-7btt">4th</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-amwm">4th</td>
+    <td class="tg-amwm">1st</td>
+    <td class="tg-amwm">2nd</td>
+    <td class="tg-amwm">3rd</td>
+    <td class="tg-amwm">4th</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">C</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-0pky">0.09 ± 0.01</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
     <td class="tg-0lax">0.09 ± 0.01</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">2nd</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.00 ± 0.01</td>
-    <td class="tg-0lax">0.08 ± 0.02</td>
-    <td class="tg-0lax">0.02 ± 0.01</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">3rd</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.09 ± 0.03</td>
-    <td class="tg-0lax">0.03 ± 0.02</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">4th</td>
     <td class="tg-0lax">0.00 ± 0.00</td>
     <td class="tg-0lax">0.00 ± 0.00</td>
-    <td class="tg-0lax">0.20 ± 0.05</td>
-    <td class="tg-0lax">0.04 ± 0.05</td>
+    <td class="tg-0lax">0.00 ± 0.00</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="4">B</td>
-    <td class="tg-0lax">1st</td>
-    <td class="tg-0lax">0.10 ± 0.03</td>
-    <td class="tg-0lax">0.09 ± 0.04</td>
-    <td class="tg-0lax">0.06 ± 0.04</td>
-    <td class="tg-0lax">0.17 ± 0.05</td>
+    <td class="tg-uzvj" rowspan="2">B</td>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-73oq">0.51 ± 0.07</td>
+    <td class="tg-0pky">0.51 ± 0.04</td>
+    <td class="tg-0pky">0.51 ± 0.06</td>
+    <td class="tg-0pky">0.54 ± 0.08</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.52 ± 0.06</td>
+    <td class="tg-0lax">0.46 ± 0.03</td>
+    <td class="tg-0lax">0.45 ± 0.03</td>
+    <td class="tg-0lax">0.46 ± 0.07</td>
   </tr>
   <tr>
-    <td class="tg-0lax">2nd</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.02 ± 0.01</td>
-    <td class="tg-0lax">0.04 ± 0.03</td>
-    <td class="tg-0lax">0.19 ± 0.05</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">3rd</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.03 ± 0.02</td>
-    <td class="tg-0lax">0.24 ± 0.06</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">4th</td>
-    <td class="tg-0lax">0.01 ± 0.02</td>
-    <td class="tg-0lax">0.01 ± 0.01</td>
-    <td class="tg-0lax">0.10 ± 0.04</td>
-    <td class="tg-0lax">0.25 ± 0.06</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="4">S</td>
-    <td class="tg-0lax">1st</td>
-    <td class="tg-0lax">0.10 ± 0.03</td>
-    <td class="tg-0lax">0.10 ± 0.02</td>
-    <td class="tg-0lax">0.15 ± 0.02</td>
-    <td class="tg-0lax">0.10 ± 0.02</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">2nd</td>
-    <td class="tg-0lax">0.12 ± 0.04</td>
-    <td class="tg-0lax">0.13 ± 0.03</td>
-    <td class="tg-0lax">0.11 ± 0.03</td>
-    <td class="tg-0lax">0.15 ± 0.03</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">3rd</td>
-    <td class="tg-0lax">0.12 ± 0.04</td>
-    <td class="tg-0lax">0.11 ± 0.05</td>
-    <td class="tg-0lax">0.15 ± 0.04</td>
-    <td class="tg-0lax">0.19 ± 0.05</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">4th</td>
-    <td class="tg-0lax">0.11 ± 0.06</td>
-    <td class="tg-0lax">0.11 ± 0.06</td>
-    <td class="tg-0lax">0.19 ± 0.07</td>
-    <td class="tg-0lax">0.22 ± 0.07</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="4">L</td>
-    <td class="tg-0lax">1st</td>
-    <td class="tg-0lax">0.15 ± 0.04</td>
-    <td class="tg-0lax">0.13 ± 0.04</td>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-0pky">0.13 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.03</td>
+    <td class="tg-0pky">0.14 ± 0.04</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
     <td class="tg-0lax">0.12 ± 0.02</td>
-    <td class="tg-0lax">0.26 ± 0.04</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">2nd</td>
-    <td class="tg-0lax">0.09 ± 0.03</td>
+    <td class="tg-0lax">0.09 ± 0.02</td>
+    <td class="tg-0lax">0.08 ± 0.03</td>
     <td class="tg-0lax">0.08 ± 0.04</td>
-    <td class="tg-0lax">0.13 ± 0.04</td>
-    <td class="tg-0lax">0.29 ± 0.05</td>
   </tr>
   <tr>
-    <td class="tg-0lax">3rd</td>
-    <td class="tg-0lax">0.06 ± 0.03</td>
-    <td class="tg-0lax">0.06 ± 0.03</td>
+    <td class="tg-uzvj" rowspan="2">S</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-0pky">0.34 ± 0.04</td>
+    <td class="tg-0pky">0.23 ± 0.03</td>
+    <td class="tg-0pky">0.28 ± 0.07</td>
+    <td class="tg-0pky">0.26 ± 0.06</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.34 ± 0.03</td>
+    <td class="tg-0lax">0.22 ± 0.03</td>
+    <td class="tg-0lax">0.25 ± 0.04</td>
+    <td class="tg-0lax">0.26 ± 0.11</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">20</td>
+    <td class="tg-0pky">0.10 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.03</td>
+    <td class="tg-0pky">0.13 ± 0.05</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.09 ± 0.02</td>
     <td class="tg-0lax">0.11 ± 0.04</td>
-    <td class="tg-0lax">0.30 ± 0.07</td>
+    <td class="tg-0lax">0.12 ± 0.04</td>
+    <td class="tg-0lax">0.13 ± 0.09</td>
   </tr>
   <tr>
-    <td class="tg-0lax">4th</td>
-    <td class="tg-0lax">0.06 ± 0.04</td>
-    <td class="tg-0lax">0.05 ± 0.03</td>
-    <td class="tg-0lax">0.13 ± 0.08</td>
-    <td class="tg-0lax">0.27 ± 0.07</td>
+    <td class="tg-uzvj" rowspan="2">L</td>
+    <td class="tg-c3ow">20</td>
+    <td class="tg-0pky">0.55 ± 0.05</td>
+    <td class="tg-0pky">0.58 ± 0.04</td>
+    <td class="tg-0pky">0.59 ± 0.06</td>
+    <td class="tg-0pky">0.55 ± 0.09</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.56 ± 0.04</td>
+    <td class="tg-0lax">0.58 ± 0.04</td>
+    <td class="tg-0lax">0.54 ± 0.07</td>
+    <td class="tg-0lax">0.53 ± 0.08</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="4">T</td>
-    <td class="tg-0lax">1st</td>
-    <td class="tg-0lax">0.25 ± 0.09</td>
-    <td class="tg-0lax">0.10 ± 0.05</td>
-    <td class="tg-0lax">0.28 ± 0.04</td>
-    <td class="tg-0lax">0.71 ± 0.04</td>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-0pky">0.23 ± 0.04</td>
+    <td class="tg-0pky">0.22 ± 0.03</td>
+    <td class="tg-0pky">0.23 ± 0.06</td>
+    <td class="tg-0pky">0.22 ± 0.04</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.19 ± 0.05</td>
+    <td class="tg-0lax">0.18 ± 0.05</td>
+    <td class="tg-0lax">0.17 ± 0.06</td>
+    <td class="tg-0lax">0.13 ± 0.04</td>
   </tr>
   <tr>
-    <td class="tg-0lax">2nd</td>
-    <td class="tg-0lax">0.14 ± 0.08</td>
-    <td class="tg-0lax">0.07 ± 0.06</td>
-    <td class="tg-0lax">0.22 ± 0.08</td>
-    <td class="tg-0lax">0.66 ± 0.10</td>
+    <td class="tg-7btt">T</td>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-0pky">0.64 ± 0.11</td>
+    <td class="tg-0pky">0.58 ± 0.10</td>
+    <td class="tg-0pky">0.55 ± 0.12</td>
+    <td class="tg-0pky">0.55 ± 0.10</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0.57 ± 0.07</td>
+    <td class="tg-0lax">0.62 ± 0.07</td>
+    <td class="tg-0lax">0.62 ± 0.06</td>
+    <td class="tg-0lax">0.58 ± 0.11</td>
+  </tr>
+</tbody></table>
+
+Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model Gemma 2:
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-7btt" colspan="14">Gemma 2</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-7btt" colspan="4">PyMuPdf</td>
+    <td class="tg-c3ow" colspan="4"><span style="font-weight:bold">GROBID</span></td>
+    <td class="tg-amwm" colspan="4">Nougat</td>
   </tr>
   <tr>
-    <td class="tg-0lax">3rd</td>
-    <td class="tg-0lax">0.14 ± 0.09</td>
-    <td class="tg-0lax">0.05 ± 0.04</td>
-    <td class="tg-0lax">0.19 ± 0.04</td>
-    <td class="tg-0lax">0.75 ± 0.10</td>
+    <td class="tg-uzvj"></td>
+    <td class="tg-7btt">k</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-7btt">4th</td>
+    <td class="tg-7btt">1st</td>
+    <td class="tg-7btt">2nd</td>
+    <td class="tg-7btt">3rd</td>
+    <td class="tg-amwm">4th</td>
+    <td class="tg-amwm">1st</td>
+    <td class="tg-amwm">2nd</td>
+    <td class="tg-amwm">3rd</td>
+    <td class="tg-amwm">4th</td>
   </tr>
   <tr>
-    <td class="tg-0lax">4th</td>
-    <td class="tg-0lax">0.09 ± 0.05</td>
-    <td class="tg-0lax">0.01 ± 0.02</td>
-    <td class="tg-0lax">0.19 ± 0.06</td>
-    <td class="tg-0lax">0.75 ± 0.11</td>
+    <td class="tg-7btt">C</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-0pky">0.09 ± 0.01</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky">0.00 ± 0.00</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
   </tr>
-</tbody>
-</table>
+  <tr>
+    <td class="tg-uzvj" rowspan="2">B</td>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-73oq">0.52 ± 0.05</td>
+    <td class="tg-0pky">0.51 ± 0.09</td>
+    <td class="tg-0pky">0.53 ± 0.06</td>
+    <td class="tg-0pky">0.58 ± 0.10</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-0pky">0.13 ± 0.02</td>
+    <td class="tg-0pky">0.14 ± 0.03</td>
+    <td class="tg-0pky">0.12 ± 0.04</td>
+    <td class="tg-0pky">0.16 ± 0.05</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="2">S</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-0pky">0.34 ± 0.04</td>
+    <td class="tg-0pky">0.22 ± 0.03</td>
+    <td class="tg-0pky">0.26 ± 0.05</td>
+    <td class="tg-0pky">0.24 ± 0.08</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">20</td>
+    <td class="tg-0pky">0.10 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.02</td>
+    <td class="tg-0pky">0.12 ± 0.03</td>
+    <td class="tg-0pky">0.11 ± 0.06</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="2">L</td>
+    <td class="tg-c3ow">20</td>
+    <td class="tg-0pky">0.56 ± 0.04</td>
+    <td class="tg-0pky">0.55 ± 0.04</td>
+    <td class="tg-0pky">0.57 ± 0.06</td>
+    <td class="tg-0pky">0.55 ± 0.08</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">5</td>
+    <td class="tg-0pky">0.22 ± 0.04</td>
+    <td class="tg-0pky">0.22 ± 0.03</td>
+    <td class="tg-0pky">0.25 ± 0.04</td>
+    <td class="tg-0pky">0.23 ± 0.08</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">T</td>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-0pky">0.74 ± 0.06</td>
+    <td class="tg-0pky">0.71 ± 0.10</td>
+    <td class="tg-0pky">0.68 ± 0.16</td>
+    <td class="tg-0pky">0.69 ± 0.15</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</tbody></table>
 
 ## License
 
@@ -532,4 +644,4 @@ The dataset used for training and benchmark are available under the license [Att
 
 ## Wiki
 
-For and extended version of the paper and other information visit our wiki page: https://github.com/AKSW/natuke/wiki/NatUKE-Wiki.
+The original NatUKE benchmark has an extended version of the paper and other information at the wiki page: https://github.com/AKSW/natuke/wiki/NatUKE-Wiki.
