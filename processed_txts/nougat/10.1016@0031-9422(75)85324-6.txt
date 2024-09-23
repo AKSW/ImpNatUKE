@@ -1,0 +1,40 @@
+10.1016@0031-9422(75)85324-6.pdf
+Page 1
+2] White, E. P. (1954) N.Z. J. Sci. Technol.35B, 451.
+* [3] Camp, B. J. et Lyman, C. M. (1956) J. Am. Pharm. Assoc.45, 719.
+* [4] Camp, B. J. et Lyman, C. M. (1957) Southwestern Vet.10, 133.
+* [5] White, E. P. (1957) N.Z. J. Sci. Technol.38B, 718.
+* [6] Camp, B. J. et Moore, J. A. (1960) J. Am. Pharm. Assoc.49, 138.
+* [7] Fitzgerald, J. S. (1964) Australian J. Chem.17, 160.
+* [8] Camp, B. J. et Norwell, M. J. (1966) Econ. Botany20, 274.
+* [9] Fitzgerald, J. S. et Sicumis, A. A. (1965) Australian J. Chem.18, 433.
+* [10] Lou. V., Koo, W.-Y. et Ramstad, E. (1965) Lloyda28, 207.
+* [11] Rovelli, B. et Vaughan, G. N. (1967) Australian J. Chem.20, 1299.
+* [12] Arthur, H. R., Loo, S. N. et Lamberton, J. A. (1967) Australian J. Chem.20, 811.
+* [13] Repke, D. B., Mandell, D. M. et Thomas, J. H. (1973) Loyola36, 211.
+* [14] Camp, B. J., Adams R. et Dollahite, J. W. (1964) Ann. N.Y. Acad. Soc.111, 744.
+* [15] Adams, H. R. et Camp, B. J. (1966) Toxicon4, 85.
+* [16] Johns, S. R., Lamberton, J. A. et Siounis, A. A. (1966) Australian J. Chem.19, 1539.
+* [17] Fitzgerald, J. S. (1964) Australian J. Chem.17, 375.
+* [18] Fikenscher, L. H. (1960) Pharm. Weckblad95, 233.
+* [19] Gupta, G. L. et Nigam, S. S. (1971) Plauta Med.19, 55.
+P__lunt. Hymenoptera coubaril L. Source. Campinas, Sao Paulo, Brazil. Uses. The trunk resin has been used in the manufacture of varnish. It is also used in a syrup recommended for the treatment of bronchitis and an infusion of the bark is used for stomach troubles. Previous work. On resin [t-7]. Present work. Bark. A C6H6 extract of dried and finely ground leaves subjected to various chromatographic separations yielded a series of resin acids, three of which are listed below; and sitosterol identified by mp and mmp. The acids have been isolated previously from Trachylobium verrucosum Oliv. [8] and O__xystigma oxyphyllum Harms [9]; but not from other parts of the Hymenea coubaril so far studied.
+Eperua-7,13-dien-15-oic acid, eluted from a silica column with hexane-Et2O, 8:2 and crystallized from EtOAc. had mp 116-117deg, [z]({{\rm D}}{{\rm D}}^{22}) - 32 (_c, 1:5, CHCl3); d(CDCl3) 075 (s. -Me), 0:85 (s, -Me), 0:86 (s, -Me), 1:65 (s, C=C-CH3), 2:15 (d, (J)1 Hz, C=C-CH3 conj.), 5:36 (m, C=C-H conj.). M+ (m, C=C-H conj.), 11:90 (COOH). The IR spectrum showed strong absorptions at ({}{{\rm max}}^{{\rm x}{\rm K}{\rm K}{\rm B}}) 3500-2500 (COOH), 1700 (_a,(b) unsat. C=O), 1645 (C=C conj.). M+ at m/e 304. These data suggested the compound was a resin acid. When treated with CH2N2, it yielded an oily methyl ester, the spectral data of which were in accordance with those reported for eperua-7,13-dien-15-oate methyl ester [9].
+Lab-13-en-8b-ol-15-oic acid (enantio), eluted from a silica column with hexane-Et2O 4:6 and crystallized from Et2O-limonene, had mp 147-148deg, [z]({{\rm D}}{{\rm D}}^{22}) - 34 (_c 3, CHCl3). The IR spectrum had strong absorptions at ({}{{\rm max}}^{{\rm x}{\rm K}{\rm B}}) 3420 (-OH), 3250 (-OH), 1700 (C=O). 1650 (C=C, conj.). The PMR spectrum showed _d(CDCl3) 0:83 (s. -Me), 0:86 (s, -Me), 0:95 (s. -Me) 1:13 (s. -Me), 2:16 (d, (J)1 Hz, C=C-CH3 conj.), 5:66 (m, C=C-H conj.) M+ at m/e 322. The structure was elucidated through the methyl ester and the product of its reduction with LiAlH4. These compounds had physical data identical with those reported for the lab-13-en-8b-ol-15-oic acid (enantio) derivatives [8].
+Labdan-8b-ol-15-oic acid (enantio) was eluted from a silica column with hexane-Et2O 1:1, and then treated with CH2N2. The product, crystallized from Et2O, had mp 82deg, [z]({{\rm D}}{{\rm D}}^{25}) - 4:0; M+ at _m/e 338. The PMR spectrum was identical with that reported [8]. Reduction of the methyl ester 
+Page 2
+with LiAlH4 yielded the diol with physical data identical with those reported [8].
+Several other resin acids were detected but unfortunately were not present in sufficient quantities to allow further studies.
+Acknowledgements.
+The authors are indebted to the Fundacao de Amparo a Pesquisa do Estado de Sao Paulo and to the Financiadora de Estudos e Projetos (Brazil), for grants.
+References
+
+1 Nakano, T. and Djerassi, C. (1961) J. Org. Chem.26, 167.
+2 Cunningham, A., Martin, S. S. and Langenheim, J. H. (1973) Phytochemistry12, 633.
+13 Martin, S. S., Langenheim, J. H. and Zavarin, E. (1973) Biochem. Systematics1, 35.
+14 Cunningham, A., Martin, S. S. and Langenheim, J. H. (1974) Phytochemistry13, 294.
+13 Khoo, S. F., Oehlschlager, A. C. and Ourisson, G. (1973) Tetrahedron29, 3379.
+14 Martin, S. S., Langenheim, J. H. and Zavarin, E. (1972) Phytochemistry11, 3049.
+14 Martin, S. S., Langenheim, J. H. and Zavarin, E. (1974) Biochem. Systematics Ecology2, 1.
+1 Hugel, G., Oehlschlager, A. G. and Ourisson, G. (1967) Tetrahedron, Suppl. 8, Pt 1, 203.
+14 Bevan, C. W. L., Ekong, D. E. U. and Okogum, J. I. (1968) J. Chem. Soc. 1067.

@@ -1,0 +1,34 @@
+10.1016@S0031-9422(00)88971-2.pdf
+Page 1
+20-Epiheynenaine, an iboga alkaloid from Peschiera affinis
+Francisco J. Abreu Matos, Ramundo Braz F. Otto R. Gottlieb, F. Welbaniede L. Machado and M. Iracema L. M. Madruga
+Departamento de Quimica Organica e Inorganica, Universidade Federal do Ceara, Fortaleza and
+Instituto de Quimica, Universidade de Sao Paulo, Brasil
+Instituto de Quimica, Universidade de Sao Paulo, Brasil
+Page 2
+substantial amounts of iboga alkaloids, as well as diviscine, usually associated with the genera Tabernaemontana, Tabernathe and Voacanga; only trace amounts of vobasine and no sarpagine type alkaloids were isolated. Thus, it appeared to the authors [5] that P. lundii might be better viewed as a Tabernaemontana species than as a species of Peschiera. The present re-investigation of P. affinis, however, again revealed the presence of iboga alkaloids (20-epipheyenanine, coronaridine, coronaridine pseudoindoxyl) and olivacine in the genus Peschiera, and confirmed the presence of affinisine. This seems to suggest that the indicated chemical differences are of little systematic significance. It should, nevertheless, not be forgotten that the close botanical relationship between these two genera has often led to confusion and either generic name has been assigned to a species, according to a botanist's individual preferences [5].
+Furthermore, the previous study on P. affinis[11] employed an EtOH extract of the "whole plant" in which our root bark constituents could have played a relatively minor role and escaped detection. Both analyses refer to specimens collected in north-eastern Brazil. This origin eliminates doubts about correctness of identifications of the plant material. P. affinis is one of the more frequent and characteristic shrubs of the sandy plateaus around Fortaleza and no other species of these two genera is known to grow in Ceara State. The identification was based on studies by Adolfo Ducke [13], and confirmed by Dr. G. M. Barroso (Rio de Janeiro Botanical Garden) and Dr. J. Monachino (New York Botanical Garden).
+EXPERIMENTAL
+Isolation of the constituents. Dry powdered root bark (200 g) was percolated successively with hexane and 0.1 N HCl. The hexane soln. was evap. and the residue (3 g) extd. with hot MeOH. The MeOH soln. was evap. and the residue (420 mg) separated by SiO2 column chromatography into a solid hydrocarbon, slotted, b-amyrin, lupol and 3-0-acetyl-pool. The HCl ion. was balsified with NH4OH. The pH. (9-1 g) was separated by centrifugation and extd. with C6H6-MeOH (3 : 1). Cray. of the solvent gave a residue (6 5 g) which was separated by SiO2 column chromatography into fractions A1, A2 and A3. A1 (1 g) was separated by PLC (SiO2) into stosterol, 3-0-acetylunpol, lupol and an alkaloid mixture. The mixture, in anh. C6H6-Et2O, was treated with dry HCl gas. The ppt was collected and separated into the chlorophyll-rates of coronaridine, mp 225-27deg dec. (lit. [4] 235deg dec.), and coronaridine pseudoindoxyl, mp 260deg dec. (lit. [5] 278-279deg dec.), by fractional crystallization from anh. Me2CO. The free bases were obtained by alkalination of the salt solutions and extd. with C6H6. A2 (2 5 g) was separated by SiO2 column chromatography into an additional quantity of cornaridine, a vitreous mass which ppt crude 1b (1:2 g) upon addition of Me2CO, and olivacine (00 mg) mp 315deg dec. (C6H6-MeOH, 9 : 1) (lit. [13] 314-316deg) A3 (2 g) was chromatographed on an Al2O3 column. Elution with C6H6 gave a fraction which, redissolved in MeOH, was treated with conc. aq. picric acid. The ppt. was collected and recryst. from MeOH. Ion exchange chromatography gave affinisine (30 mg) mp 194-197deg (lit. [11] 194-196deg dec.).
+Epiheyenanine (1b). Colourless crystals, mp 170-172deg (cyclohexane) Mound 354:1918: C12H6,N13O3, requires 341943: ({}^{\text{2 EtOH}}{\text{4nn}})(nm): 226, 280, 285, 293 (6 26 900, 5500, 6200, 5300), ({}^{\text{xha}}{\text{4nn}})(nm - 1): 333, 1730, 1618, 1488, 1250, 1080, 1019, 746, ({}^{\text{xha}}{\text{42}})(cm - 46deg (c 10 mg/ml, CHCl3). _Acetate. Mp 214-215deg (MeOH). _V_max (cm - 1): 1730, 1709, 1626, 1493, 1729, 1505, 1074, 750: 1HMR 60 (MHz, CHCl3): 210 (s, NH): 240-310 (m, 4 Arh): 490 (m, CHQOAc): 630 (s, OMe), 650-760 (m, 8H), 795 (s, OMe), 780-870 (m, 8H), 8 (d, 7 65 Hz, Me-20).
+Acknowledgements.
+This work was sponsored by Ministerio de Planejamento (Financiadora de Estudos e Projetos S.A.) through Academia Brasileira de Ciencias and Conselho Nacional de Pesquisas. The authors are indebted to Dr. A. Aragao Craview for the MS and to Miss M. H. Torres de Araujo for technical assistance. * Note added in proof: A report on (-)-epipheyenanine [Bellefon, M. de, Debray, M.-M., Men-Oliver, L. le and Men, le (1975) Phyrochemistry14, 1649], which appeared after the present paper had been submitted, gives mp 112deg (Me2CO). Acc. to our experience, samples extd. from Me2CO show two CO IR bands of nearly equal intensity at 1710 and 1730 cm-1 and a double mp 120-130deg and 170-172deg.
+References
+
+1 Fonteles, M. C., Sampaio, M. C., Cardoso, J. H., Pereira, M. E. and Matos, F. J. A. (1969) Clencia & Cultura (Sao Paulo) 21, 508.
+2 Viana, G. S. B., Matos, F. J. A., Vieira, J. E. B., Sousa, M. P. and Medeiros, M. C. (1970) J. Pharm. Pharmacol.22, 116.
+3
+
+Page 3
+
+[3] Fonteles, M. C., Jerram, D., Matos, F. J. A. and Alquist, R. P. (1974) Planta Med.25, 175.
+[4] Gorman, M., Neuss, N., Cone, N. J. and Deyrup, J. A. (1960) J. Am. Chem. Soc.82, 1142.
+[5] Hwang, B., Weisbach, J. A., Douglas, B., Raffauf, R. F., Cava, M. P. and Bessho, K. (1969) J. Org. Chem.34, 412.
+[6] Cava, M. P., Talapatra, S. K., Weisbach, J. A., Douglas, B., Raffauf, R. F. and Ribeiro, O. (1964) Chem. Ind. (London) 1193.
+[7] Schmutz, J. and Wittwer, H. (1960) Helv. Chim. Acta43, 793.
+[8] Govindachari, T. R., Joshi, B. S., Saksena, A. K., Sathe, S. S. and Viswanathan, N. (1965) Tetrahedron Letters 3873.
+[9] Kupchan, S. M., Cassady, J. M. and Telang, S. A. (1966) Tetrahedron Letters 1251.
+[10] Verkey, E. T., Pillay, P. P., Bose, A. K. and Das, K. G. (1966) Indian J. Chem.4, 332.
+[11] Weisbach, J. A., Raffauf, R. F., Ribeiro, O., Macko, E. and Douglas, B. (1963) J. Pharm. Sci.52, 350.
+[12] Ondetti, M. A. and Deulofeu, V. (1961) Tetrahedron15, 160.
+[13] Ducke, A. (1959) Anals Acad. Brasil. Cienc.31, 211.

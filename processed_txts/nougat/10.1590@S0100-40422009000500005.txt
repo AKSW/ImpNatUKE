@@ -1,0 +1,121 @@
+10.1590@S0100-40422009000500005.pdf
+Page 1
+Quim. Nova, Vol. 32, No. 5, 1107-1109, 2009
+**FLAVONAS, LIGNANAS E TERPENO DE Piper umbellata (PIPERACEAE)
+Debora Cristina Baldoqui, Vanderlan da S. Bolzani e Maysa Furlan*
+Instituto de Quimica, Universidade Estadual Paulista, CP 355, 14800-900 Araraquara - SP, Brasil
+Massuo J. Kato
+Instituto de Quimica, Universidade de Sao Paulo, CP 26077, 05599-970 Sao Paulo - SP, Brasil
+Marcia O. M. Marques
+Instituto Agronomico de Campinas, 13075-630 Campinas - SP, Brasil
+Recebido em 14/1/08; acetic em 10/12/08; publicado na web em 7/5/09
+FLAVONES, LIGNANAS AND TERPENE FROM Piper umbellata (PIPERACEAE). The phytochemical investigation of Piper umbellata leaves yielded nine compounds including one terpenoid glucoside, five flavones (vietexin 2"-O-b-glucopyranoside, apigenin 8-C-b-D-glucopyranoside, oretinin 8-C-b-D-glucopyranoside, 5-hydroxy-7,3",4"-trimethoxy-flavone and velutin), two lignans (sesamin e dithydrocubebin) and 4-nerolidylcathecol. Excepting 4-nerolidylcathecol, all compounds have not been described from this species yet.
+Keywords: Piper umbellata; Potomorphe umbellata; constitutive metabolites.
+INTRODUCTION
+Piperaceae, que pertence a ordem Piperales, tem sido classificationa junto com Chlorantaceae entre as mais primitivas angiosperms podendo, assim, ser considerada um fossil vegetal vivo.1 A grande maioria de suas especies produz frutos do tipo espigas com grande quantitadde de semetures que possuem sindrome de dispersa ozoocorica, sendo muito fequente a dispersa po morcegos.2
+Especies de Piperaceae esto sido sondo subdivididas en quatro (como medimento - Piper nigram),3 como insecticides4e, tambem, na medicina tradicional devido ao acimulo de diferentes classes de metabolites biologicamente ativos, tais como fenilpropanides,5 lignanas/neoliganas,6,10 pironas,11 amidas alifaticas e aromatics,12,14 alcaloides,15 policctides6e cromenos,17,22 idem de outros metabolitos de biossinrese mista.7,234
+As especies de Piperaceae esto sendo subdivididas em quatro generos,28 sendo que os mais abundantes sao Peperomia Ruiz e Pavon, com aproximadamente 1700 especiesi5e Piper L., com cerca de 2000 especies.27 Muitos generos foram includos como sinonimias dentro do genero Piper, por exemplo, Arcttotonia Trel., Macropiper Miq., Pothomorphe Miq., Ontonia Spreng, e Trianaeopiper Trel.28
+Footnote 2: e-mail: maysaf@iq.unesp.br
+A especies Piper umbellata, anteriormente classifada como Potomorphe umbellata,
+Page 2
+procedimento foi utilizado para a purificacao da fracao 14, que resulto em um po amarelo, a qual foi identificada como sendo substancia 4 (orientina 8-C-b-D-glucopiranosideo) (0,006 g).
+A fracao CHCl2 (18,0) g foi submetida a CC de silica gel 60, eluida com Hex:AcOEi, em propo(\overline{\text{c}}) crescentes de polaridade, resultando em 13 ragices. A fracao 4 (0,235 g) foi recrissidaa em hexano e resoltuo em um pretzdo em forma de agulbas, o qual foi identificado como sendo a substancia 5 (essamina) (0,183 g). A fracao 8 (0,488 g) foi submetida a uma columa de silica gel eluida com CHCl2:MeOH em proporc esresentes de polaridade, resultando em 21 fracoes. A fracao 8-2 (0,020 g) foi submetida a CCPD, eluida como (95:5), fomecendo 2 fracoes. A fracao 8-2 l'estulton cum up como amarelo, o qual foi identificado como sendo a substancia 6 (5-bindorai-7, 3', 4'-trimetoxin-flavona ) (0,006 g). A fracao 8-5 (0,052 g) foi submetida a CCDP, eluida como CHCl2:MeOH (95:5), fomecendo 3 fracoes. A fracao 8-5-1, um po amarelo, foi identificada como sendo a substancia 7 (velutina) (0,008 g). A fracao 10 (0,931 g) foi submetida a uma columa de silica eluida com CHCl2:MeOH em proporc esresentes de polaridade, resultando em 20 fracoes. A fracao 10-13 (0,102 g) foi submetida a uma columa de silica eluida como CHCl2:MeOH em proporc esresentes de polaridade, efficace 10 (15 fracoes. A fracao 10-13 foi identificada como sendo a substancia 8 (ditirotcabebina) (0,024 g).
+O ultimo extrato estudado foi o extrato hexanico (166 g) e levou ao reisolamento das substancias 5 e 6, alem do isolamento 4-neroli-dilcated (9) ja isolado previamente de folhas de Piper umbellata.
+Resultados e discussao
+O estudo fitoquimico das folhas de Piper umbellata levou ao isolamento de 9 substancias, as quais foram identificadas pela analise de dados espectrometricos, tais como RMN de ({}^{1})H e ({}^{1})C, HMQC, HMBC e EM. Execuando-se o 4-nerolidilcated, todas as substancias isoladas neste trabalho sao descritas pela primeira vez nesta espece vegetal.
+A substancia 1 foi identificada como sendo um prososideo, um terpene glicosilada primeramente isolado de folhas de Vinca rosea.30 Comparando os dados de RMN de ({}^{13})C com os publicados na literatu-ra30,30 foi possibel propor a esteroequimica relativa da substancia 1 como sendo rel-(6S, 9S)-rosososideo, devio aos deslocamentos quimicos dos carbonos C-6, C-7, C-8 e C-9 em 878, 10, 131, 7, 131, 7 e 72,0, respectivenante, os quais siso significamente diferentes dos deslocamentos quimicos na nesturma do (6S, 9R)-rosososideo30,00 en 80, 134, 18, 131, 4 e 76,2, respectivamente. O esteroeisomerso (6S, 9R) ja foi isolado de Piper elongatum VAHL:41 entretanto, o esteroeisomerso (6S, 9S) esta sendo descritc pela primeira vez em especies de Piper.
+As substancias 2 - 4, 6 7 foram identificadas como sendo flavonas, atrav es da analise dos dados de EM, RMN de ({}^{1})H e ({}^{13})C e espercts bidimensionais COSY ({}^{1})H:-H, HMQC e HMBC, alem de comparaao com dados publicados anteriormente. Nos esperctso de RMN de ({}^{1})H as flavonas mostram un singlede entre (\delta), 6,0 e 8 8,0 caracteristico do hidrogenio ligado ac O-3, sendo que no espercto de RMN de ({}^{13})C o snail correspondente a este carbono mostra sinal entre (\delta) 90,0 e 8 135,0.42 A substancia 2 foi identificada como uma C-glicosiflavonam-O-glicosideo, vitezina 2"-O-b-D-glucopiranosideo,43,44, 48 as substancias 3 c 4** foram identificadas como C-glicosiflavonas, apieena-8-C-b-D-glucopiranosideo e orientina 8-C-b-D-glucopiranosideo, respectivamente.45, 46
+Os estudos fitoquimicos de especies de Piperaceae tem mostrado o acmulo de uma grande variedade de flavonoides, especialmente com o anel B nao substitudo.47 Entretanto, a presenca de flavonoides C-glicosilados e rara.47 A substancia 4, orientina 8-C-b-D-glucopiranosideo, ja foi previamente isolada de Piper solisamiente e P. Horzymann.47,48 Derivados C-glicosilados da vitezna, tais como a vitezna-C-d-L-raminose-(1-a2)-b-D-glucopiranosideo, uefica-C-d-L-arabinosidco e vitexina-C-b-glucopiranosideo, foram descritos em Piper methylistcum.49 Entretanto, a viexina 2"-O-b-D-glucopiranosideo (2) esta sendo descrita pela primeira vez neste genoro. Ate o momento, derivados da apigenina nao foramt bem descritos em especies de Piperaceae.
+A substancia 6 foi identificada como sendo a 5-hdrioxi-7,3',4'-trimetoxin-flavona, isolado previamente em Piperaceae do extrato de sementes de Piper sylvaticum.42,50 A substancia 7 foi identificada como sendo a velutina, previamente isolada dos caules e das folhas de Piper clarkii.42,51
+As substancias 5 e 8 foram identificadas como sendo as lignanas esemaina e diidrocubehina, as quais ja foram isoladas de varias especies de Piper, incluindo Piper brachystachyum Wall, P. retrofractum, P. peepuloides, P. guineense e P. cubeba.72,53
+MATERIAL supplementar
+Os espectros de RMN de ({}^{1})H e RMN de ({}^{12})C das substancias isoladas de Piper umbellata encontram-se disponvieis em http://quimicatova.sba.org.br, na forma de arquivo pdf, com acceso gratuito.
+AGREDECIMENTS
+Ao CNPq, (\lambda) CAPES e a FAPESP, incluindo o Programa BIOTA (Instituto Virtual da Biodiversidade - www.biota.org.br) pelos auxilios e bolsas concedidas.
+REFERENCIAS
+1 Taylor, D. W.; Hickey, L. J.; Plant Systematics and Evolution 1992, 180, 137.
+Figure 1: Estruturas quimicas das substancias isoladas das folhas de Piper umbellata
+Page 3
+
+(2) Vasquez-Yanes, C.; Segovia, A. O.; Physiological ecology of plants of the wet tropics, Dr. W. Publishers: The Hage, 1984, p. 37.
+(3) Simpson, B. B.; Ogorzaly, M. O.; Economic Botany: plants in our world, 2nd ed., McGraw-Hill Inc.: New York, 1995.
+(4) Debonsi, H. M.; Miranda, J. E.; Bortoli, S. A.; Kato, M. J.; Furlan, M.; Pest Manag. Sci.2007, 63, 399.
+(5) Oriala, J.; Erdelmeier, C. A. J.; Wright, A. D.; Rali, T.; Sticher, O.; Pytochemistry1993, 34, 813.
+(6) Monache, F. D.; Compagnone, R. S.; Photochemistry1996, 43, 1097.
+(7) Parmar, V. S.; Jain, S. C.; Bisht, K. S.; Taneja, P.; Jha, A.; Tyagi, O. D.; Prasad, A. K.; Wengel, J.; Olsen, C. E.; Boll, P. M.; Photochemistry1997, 46, 597.
+(8) Benevides, P. J. C.; Sartorelli, P.; Kato, M. J.; Pytochemistry1999, 52, 339.
+(9) Martins, R. C., Lago, J. H. G.; Kato, M. J.; Photochemistry2003, 64, 667.
+(10) Felippe, L. G.; Baldoqui, D. C.; Bolzani, V. S.; Kato, M. J.; Guimaraes, E. F.; Cicarelli, R. M. B.; Furlan, M.; Pytochemistry2008, 69, 445.
+(11) Singh, Y. N.; J. Elmopharmacol.1992, 37, 13.
+(12) Alcio, A. C.; Bolzani, V. S.; Young, M. C. M.; Kato, M. J.; Furlan, M.; J. Nat. Prod.1998, 61, 637.
+(13) Navickiene, H. M. D.; Alcio, A. C.; Kato, M. J.; Bolzani, V. S.; Young, M. C. M.; Cavalheiro, A. J.; Furlan, M.; Photochemistry2000, 55, 621.
+(14) Silva, R. V.; Navickiene, H. M. D.; Kato, M. J.; Bolzani, V. S.; Meda, I.; Young, M. C. M.; Furlan, M.; Photochemistry2002, 59, 521.
+(15) Dodson, C. D.; Dyer, L. A.; Searcy, J.; Wright, Z.; Letourneau, D. K.; Photochemistry2000, 53, 51.
+(16) Cheng, M.; Lee, S.; Chang, Y.; Wu, S.; Tsai, I.; Photochemistry2003, 63, 603.
+(17) Moreira, D. L.; Guimaraes, E. F.; Kaplan, M. A. C.; Photochemistry1998, 48, 1075.
+(18) Baldoqui, D. C.; Kato, M. J.; Cavalheiro, A. J.; Bolzani, V. S.; Young, M. C. M.; Furlan, M.; Photochemistry1999, 51, 899.
+(19) Lago, J. G. L.; Ramos, C. S.; Casanova, D. C. C.; Morandim, A. A.; Bergamo, D. C.; Cavalheiro, A. J.; Bolzani, V. S.; Furlan, M.; Guimaraes, E. F.; Young, M. M. C.; Kato, M. J.; J. Nat. Prod.2004, 67, 1783.
+(20) Morandim, A. A.; Bergamo, D. C. B.; Kato, M. J.; Cavalheiro, A. J.; Bolzani, V. S.; Furlan, M.; Photochem. Anal.2005, 16, 282.
+(21) Salazar, K. J. M.; Paredes, G. E. D.; Iluncor, L. R.; Young, M. C. M.; Kato, M.; Photochemistry2005, 66, 573.
+(22) Lago, J. H. G.; Young, M. C. M.; Reigada, J. B.; Soares, M. G.; Roesler, B. P.; Kato, M. J.; Quim. Nova.2007, 30, 1222.
+(23) Danelutte, A. P.; Lago, J. H. G.; Young, M. C. M.; Photochemistry2003, 64, 555.
+(24) Kato, M. J.; Furlan, M.; Pure Appl. Chem.2007, 79, 529.
+(25) Jaramillo, M. A.; Manos, P. S.; Zimmer, E. A.; Int. J. Plant Sci.2004, 165, 403.
+(26) Wanke, S.; Samain, M. S.; Vanderschaeve, L.; Mathieu, G.; Goetghebeur, P.; Neinhuis, C.; Plant Biol.2006, (8), 93.
+(27) Quijano-Abril, M. A.; Callejas-Posada, R.; Miranda-Esquivel, D. R.; J. Biogeografic.2006, 33, 1266.
+(28) Wanke, S.; Jaramillo, M. A.; Borsch, T.; Samain, M.; Quandt, D.; Neinhuis, C.; Mol. Phylogenet. Evol.2007, 42, 477.
+(29) Kijjoa, A.; Giesbrecht, A. M.; Akiesue, M. K.; Gottlieb, O. R.; Gottlieb, H. E.; Planta Med.1980, 39, 85.
+(30) Amorim, C. Z.; Flores, C. A.; Gomes, B. E.; Marques, A. D.; Cordeiro, R. S. B.; J. Ethnopharmacol.1988, 24, 101.
+(31) Ferreira-da-cruz, M. F.; Adami, Y. L.; Espinola-mendes, E. C.; Figueiredo, M. R.; Daniel-ribeiro, C. T; Exp. Parasitol.2000, 94, 243.
+(32) Desmachelier, C.; Slowing, K.; Ciccia, G.; Fitterapia2000, 71, 556.
+(33) Ropke, C. D.; Kaneko, T. M.; Rodrigues, R. M.; Silva, V. V; Barros, S.; Sawada, T. C. H.; Kato, M. J.; Barros, S. B. M.; Int. J. Pharm.2002, 249, 109.
+(34) Felzenszwalb, I.; Valsa, J. O.; Araujo, A. C.; Alcantara, R. G.; Braz. J. Med. Biol. Res.1987, 20, 403.
+(35) Desmachelier, C.; Barros, S.; Repetto, M.; Latorre, L. R.; Kato, M. J.; Cousso, J.; Ciccia, G.; Planta Med.1997, 63, 567.
+(36) Bergamo, D. C. B.; Kato, M. J.; Bolzani, V. S.; Furlan, M.; J. Braz. Chem. Soc.2005, 16, 1406.
+(37) Bergamo, D. C.; Kato, M. J.; Bolzani, V. S.; Furlan, M.; Br P1 070.0238-6, 2007.
+(38) Bhakuni, D. S.; Joshi, P. P.; Uprety, H.; Kapil, R. S.; Pytochemistry1974, 13, 2541.
+(39) Otsuka, H.; Yao, M.; Kamada, K.; Takeda, Y.; Chem. Pharm. Bull.1995, 43, 754.
+(40) Cails, I.; Kuruuzum-Uz, A.; Lorenzetto, P. A.; Ruedi, P.; Pytochemistry2002, 594, 451.
+(41) Masuoka, C.; Ono, M.; Ito, Y.; Nohara, T.; Food Sci. Technol. Res.2003, (9), 197.
+(42) Agrawal, P. K.; Bansal, M. C.; Carbon-13 NMR of flavonoids, Elsevier: New York, 1989.
+(43) Markham, K. R.; Webby, R. F.; Vilain, C.; Photochemistry1984, 23, 2049.
+(44) Pauli, G. F.; Junior, P.; Photochemistry1995, 38, 1245.
+(45) Nawar, M. A. M.; El-mousallamy, A. M. D.; Barakat, H. H.; Budtrus, J.; Linscheid, M.; Photochemistry1989, 28, 3201.
+(46) Hornhammer, L.; Wagner, H.; Gloggenigesser, G.; Arch. Pharm.1958, 291, 126.
+(47) Moreira, D. L.; Guimaraes, E. F.; Kaplan, M. A. C.; Pytochemistry2000, 55, 783.
+(48) Campos, M. P.; Cechinel Filho, V.; Silva, R. Z.; Yunes, R. A.; Zacchino, S.; Juarez, S.; Bella-Cruz, R. C.; Bella-Cruz, A.; Biol. Pharm. Bull.2005, 28, 1527.
+(49) Jhoo, J. W.; Ang, C. Y. W.; Heinze, T. M.; Deck, J.; Schnackenberg, L. K.; Beger, R. D.; Dragull, K.; Tang, C. S.; Food Chem. Toxicol.2007, 72, 120.
+(50) Banerji, A.; Das, R.; Indian J. Chem. Sect. B1977, 15, 495.
+(51) Jensen, S.; Olsen, C. E.; Tyagi, O. D.; Boll, P. M.; Hussaini, f. A.; Gupta, S.; Bisht, K. S.; Parmar, V. S.; Pytochemistry1994, 36, 789.
+(52) Parmar, V. S.; Jain, S. C.; Gupta, S.; Talwar, S.; Raiwanshi, V. K.; Kumar, R.; Azim, A.; Malhotra, S. Kumar, N.; Jain, R.; Sharma, N. K.; Tyagi, O. D.; Lawrie, S. J.; Errington, W.; Howarth, O. W.; Olsen, G. E.; Singh, S. K.; Wengel, J.; Photochemistry1998, 49, 1069.
+(53) Elfahmi; Ruslan, K.; Batterman, S.; Rein, B.; Kayser, O.; Woerdenbag, H. J.; Quax, W. J.; Biochem. System. Ecol.2007, 35, 397.
+
+Page 4
+Quim. Nova, Vol. 32, No. 5, S1-S10, 2009
+**FLAVONAS, LIGNANAS E TERPENO DE Piper umbellata (PIPERACEAE)
+Debora Cristina Baldoqui, Vanderlan da S. Bolzani e Maysa Furlan*
+Instituto de Quimica, Universidade Estadual Paulista, CP 355, 14800-900 Araraquara - SP, Brasil
+Massuo J. Kato
+Instituto de Quimica, Universidade de Sao Paulo, CP 26077, 05599-970 Sao Paulo - SP, Brasil
+Marcia O. M. Marques
+Instituto Agronomico de Campinas, 13075-630 Campinas - SP, Brasil
+Figura 1S.Espector de RMN de ({}^{3})H (200 MHz, DMSO-(d{y})) da substancia I_
+Page 5
+Figure 25: Espectro de RMN de ({}^{11})C (50 MHz, DMSO-d({}{y})) da substancia I_
+Page 6
+Figure 45: Expectro de RMN de "IC (50 MHz, DMSO-d({}{y})) da substancia 2_
+Page 7
+Figure 65: Espectro de RMN de ({}^{1})C (50 MHz, DMSO-d({}_{y})) de 3
+Figure 75: Espectro de RMN de ({}^{1})H (200 MHz, DMSO-d({}_{y})) da substáncia 4
+Page 8
+Figure 85: Espectro de RMN de ({}^{11})C (50 MHz, DMSO-d({}{y})) da substáncia 4_
+Page 9
+Figure 105: Espectro de RMN de ({}^{11})C (50 MHz, CDCl({}{2})) da substancia 5_
+Page 10
+Figure 12S: Espectro de RMN de ({}^{17})C (50 MHz, CDCl({}{2})) da substáncia 6_
+Page 11
+Figure 145: Espectro de RMN de ({}^{17})C (50 MHz, CDCl({}{2}) + gotas de DMSO-d({}{3})) da substráncia 7
+Page 12
+Figure 165: Espectro de RMN de ({}^{17})C (50 MHz, CDCl({}{2})) da substáncia 8_
+Page 13
+Figure 185: Espectro de RMN de ({}^{13})C (50 MHz, CDCl({}{2})) da substáncia 9_

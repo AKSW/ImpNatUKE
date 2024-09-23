@@ -1,0 +1,47 @@
+10.1016@S0031-9422(00)88765-8.pdf
+Page 1
+The possibility of physoxanthin being a mono-cis isomer of b-cryptoxanthin (2) [6, 7] is inconsistent with its electronic spectrum and chiroptical properties. Monocis-2 is predicted to show opposite Cotton effect of all-trans-2[4].
+In conclusion, the CD data of physoxanthin evaluated in relation to accumulated knowledge on CD properties of carotenoids is taken to disprove a mono-cis form of 2 and 3' (or 2') hydroxylation of the e-ring, and is compatible with physoxanthin being identical with a-cryptoxanthin (5) [8]. The occurrence in Physalis alikekengi of other carotenoids with end group e, namely cryptoxanthin (2), zexaxanthin (7) and lutein (3) supports the preference for a 3-hydroxy-b-ring in physoxanthin. Although the reported melting points for a-cryptoxanthin (5) [9] from Capsicum annuum and physoxanthin [10], differed, this is not uncommon, and failure to separate them chromatographically also favours the assignment of identical structures.
+Acknowledgements.
+A grant from the Norwegian Research Council of Science and the Humanities to S.L. J. was used for the support of A.G.A.
+References
+
+[1] Bodea, C. and Nicoara, E. (1957) Ann. Chem.609 181.
+[2] Ke, B., Imsgard, F., Kjseen, H. and Liaaen-Jensen, S. (1970) Biochim. Biophys. Acta210, 139.
+[3] Andrews, A. G., Liaaen-Jensen, S. and Weeks, O. B. (1975) Acta Chem. Scand.B29, 884.
+[4] Hertzberg, S., Borch, G. and Liaaen-Jensen, S. Acta Chem. Scand. (in press).
+[5] Kjseen, H., Arpin, N. and Liaaen-Jensen, S. (1972) Acta Chem. Scand.26, 3053.
+[6] Straub, O.(1976) Key to Carotenoids, p. 20. Birkhauser, Basel.
+[7] Cholnoky, L. and Szabolcs, J. (1959) Ann. Chem.626, 207.
+[8] Bartlett, L., Klyne, W., Mose, W. P., Scopes, P. M., Galasko, G., Mallams, A. K., Weedon, B. C. L., Szabolcs, J. and Toth, G. (1969) J. Chem. Soc. C., 2527.
+[9] Cholnoky, L., Szabolcs, J. and Nagy, E. (1958) Ann. Chem.616, 207.
+[10] Bodea, C. and Nicoara, E. (1959) Ann. Chem.622, 188.
+
+References
+
+[1] Bodea, C. and Nicoara, E. (1957) Ann. Chem.609 181.
+[12] Ke, B., Imsgard, F., Kjseen, H. and Liaaen-Jensen, S. (1970) Biochim. Biophys. Acta210, 139.
+[13] Andrews, A. G., Liaaen-Jensen, S. and Weeks, O. B. (1975) Acta Chem. Scand.B29, 884.
+[14] Hertzberg, S., Borch, G. and Liaaen-Jensen, S. Acta Chem. Scand. (in press).
+[15] Kjseen, H., Arpin, N. and Liaaen-Jensen, S. (1972) Acta Chem. Scand.26, 3053.
+[16] Straub, O.(1976) Key to Carotenoids, p. 20. Birkhauser, Basel.
+[17] Cholnoky, L. and Szabolcs, J. (1959) Ann. Chem.626, 207.
+[18] Bartlett, L., Klyne, W., Mose, W. P., Scopes, P. M., Galasko, G., Mallams, A. K., Weedon, B. C. L., Szabolcs, J. and Toth, G. (1969) J. Chem. Soc. C., 2527.
+[19] Cholnoky, L., Szabolcs, J. and Nagy, E. (1958) Ann. Chem.616, 207.
+[20] Bodea, C. and Nicoara, E. (1959) Ann. Chem.622, 188.
+
+Page 2
+(\tau) 4.4, while 1e is a model for 1b, both showing an additional OMe singlet instead of the H-7 signal. Concerning the aromatic C5C3-moiety, 1e is a better model for 1a and 1b than 1d, not only on account of the O2CH2 substitution, all 3 compounds (1a, 1b, 1e) leading to diagnostic MS fragments of m/e 162 [PiCHMe]+ and 149 [PiCO]+, but also to the trans relation of the substituents at C-2 and 3, all 3 compounds showing Me resonances at lower field (t 8.8) than porosin (t 9.5). Although configurationally identical, the 2,3-substituents of 1a, 1b vs 1c show different conformations, as expressed by (J_{\text{H}{2}\text{,}\text{,}\text{2}\text{,}\text{,}\text{H}{3}}) respectively 2 vs 10 Hz. Canellin-B (1e) and 1b being isomeric, this can be due to difference in chirality at C-3a. Indeed, the a-aryl at C-2 confers relative protection upon the a-CH2. at C-3a of 1a and 1b (t 7.65, 7.84) and the axial a-H at C-4 of 1c (t 8.24), as compared to the b-CH2 at C-3a of 1c and 1d (t 7.4, 7.5) and the axial b-H at C-4 of 1a (t 8.16).
+The relative configuration shown in 1a and 1b also represents the absolute configurations of the compounds, on the assumption that the correlation between a positive Cotton effect at 285 nm and (2_S_)-chirality, deduced for 2,3,3a,6-tetrahydro-6-oxobenzofurans [3], is valid in the present case. Partial epimerization at C-2 of 1a reduced the intensity of the corresponding ORD band, evidence for the correctness of the assignment of the wavelength to the benzenoid chromophore.
+Hexahydro-6-oxobenzofuran neolignans such as 1a, 1b, 1c and 1d are putative biogenetic precursors of the seemingly much more numerous class of tetrahydro-6-oxobenzofurans [4]. It may, therefore, be anticipated that many further hexahydro-derivatives exist in nature.
+Experimental
+Isolation of the constituents. Licaria armeniaca (Nees) Kosterm was collected at the Ducke Forest Reserve, Manaus (Amazonas). Voucher Herbarium INPA 47251. Dry powdered trunkwood (8 kg) was percolated with C6H6 at room temp. The extract (5.5 g) was chromatographed on a dry column (SiO2 150 g, C6H6-EtOAc4, 1:1). This was extruded and divided into 12 equal parts which gave, from bottom to top, 12 fractions. Frs. 1-3 were composed of fatty material (1.7 g). Frs. 4-7 were recrystallized from MeOH to sitoosterol (1 g). Frs. 8-10 gave by perparative-TLC (SiO2, Et2O) 1a (170 mg), 1b (92 mg) and 6,7-dimethoxy-coumarin (200 mg).
+(2S,3S,3a,R5R)- 3a - Allyl-5-methoxy-2-(3',4'-methylene-dioxyphenyl)-3-methyl-2,3a,4,5,6-hexahydro-6-oxo-benzofuran (1a), chromatographically pure viscous oil (Found: M, 342.1461. C6H2O, requires: M, 342.1490). (l) (MeOH, nm): 255, 285 (\int_{0}^{2})12300, 3800). (v) (film, cm-1): 1663, 1630, 1500, 1490, 1440, 1230, 1180. PM(100 MHz, CDCl1-, (\eta): 3.2 (br 5, 3 ArH), 4.04 (s, O2CH2), 4.2-4.6 (m, CH = ), 4.44 (s, H-7). 4.78 (d, (J) = 2 Hz, H-2), 4.9 (dd, (J) = 2, 10 Hz) and 5.2 (dd, (J) = 2, 16 Hz), (CH2 = ), 6.08 (dd, (J) = 5, 12 Hz, H-5_av), 6.42 (s_, OMe-5), 7.36 (dd, (J) = 2, 8 Hz, H-3), 7.68 (dd, (J) = 7, 14 Hz) and 7.84 (dd, (J) = 7, 14 Hz), (CH2 = ), 7.7 (dd, (J) = 5, 12 Hz, H-4_eq), 8.16 (d, (J) = 12, 12 Hz, H-4_av), 8.8 (d, (J) = 8 Hz, H-3). MS m/e (%): 342 (45), M, 31 (48), 284 (48), 269 (25), 257 (82), 241 (14), 214 (25), 181 (85), 175 (100), 162 (64), 149 (10), 135 (22), 115 (20), 103 (20), 91 (14), 77 (22). ORD (c, 3.2 mg/100 ml, MeOH): (\left[ \phi \right\rbrack_{\text{4}\text{0}}^{\text{ss}} + 11\,800,\left[ \phi \right\rbrack_{\text{34}\text{0}}^{\text{ss}} + 27\,950,\left[ \phi \right\rbrack_{\text{312}}^{\text{ss}} 0,\left[ \phi \right\rbrack_{\text{285}}^{\text{lr}} - 38\,700,\left[ \phi \right\rbrack_{\text{285}}^{\text{ss}} 0.]
+(2S,3S,3a,R5R)- 3a- Allyl-5,7-dimethoxy-2-(3',4'-methyl-enedioxyphenyl)-3-methyl-2,3,3a,4,5,6-hexahydro-6-oxobenzofuran (1b), crystals, mp122-125 (Me2O) (Founolunt: M, 372.1623. C6,H2O, requires: M, 372.1641), (l) (MeOH, nm): 239 infl., 268,285 mill. (d_400, 1400, 10300), (\nu{\text{max}}^{\text{ss}}) (KBr, cm({}^{-1})): 1670, 1640, 1500, 1490, 1440, 1230, 1185, PMR (60 MHz, CDCl2, (\eta): 3.18 (br, 3 ArH), 3.98 (s, O2CH2), 4.2-4.5 (m, CH = ), 4.73 (d, (J) = 2 Hz, H2), 4.9 (dd, (J) = 2 Hz) and 5.2 (dd, (J) = 16 Hz), (CH2 = ), 6.07 (dd, (J) = 12 Hz, H-5_av), 6.17 (s, OMe-7), 6.38 (s, OMe-5), 7.35 (dd, (J) = 2, 8 Hz, H-3), 7.62 (dd, (J) = 7, 14 Hz) and 7.83 (dd, (J) = 7, 14 Hz), (CH2 = 3a), 7.67 (dd, (J) = 5, 12 Hz, H-4_eq), 8.17 (t, (J) = 12, 12 Hz, H-4_av), 8.8 (d, (J) = 8 Hz, Me-3), MS m/e (%): 372 (30), M, 342 (45), 331 (87), 303 (100), 271 (30), 190 (32), 181 (28), 175 (12), 162 (86), 149 (26), 135 (96), 116 (62), 104 (82), 103 (52), 91 (60), 77 (87), ORD (c, 4.8 mg/100 ml, MeOH): (\left[ \phi \right\rbrack_{\text{4}\text{0}}^{\text{ss}} + 2150,\left[ \phi \right\rbrack_{\text{34}\text{0}}^{\text{ss}} + 6200,\left[ \phi \right\rbrack_{\text{327}}^{\text{ss}} 0,\left[ \phi \right\rbrack_{\text{285}}^{\text{lr}} - 19\,400,\left[ \phi \right\rbrack_{\text{286}}^{\text{lr}} 0,\left[ \phi \right\rbrack_{\text{286}}^{\text{lr}} + 1950,\left[ \phi \right\rbrack_{\text{285}}^{\text{ss}} 0.]
+Epimerization of 1a to 1e. A soft of 1a (70 mg) and TsoH (1 mg) in MeOH (15 ml) was stirred (50deg, 2 hr). The soft was cooled, neutralized with dil NaHCO3, filtered and evapd. The residue was separated by preparative-TLC (SiO2, C6H6-EtOAc 1:1) into a complex mixture (20 mg) and a mixture of 1a + 1e (40 mg), as indicated by TLC and PMR (60 MHz, CDCl2, t). Integration of the doublets at 8.83 and 9.5 indicated a 1s-1e ratio of 3:1. ORD (c, 4.0 mg/100 ml, MeOH): (\left[ \phi \right\rbrack_{\text{4}\text{00}}^{\text{ss}} + 6000,\left[ \phi \right\rbrack_{\text{340}}^{\text{ss}} + 15400,\left[ \phi \right\rbrack_{\text{312}}^{\text{ss}} 0,\left[ \phi \right\rbrack_{\text{285}}^{\text{ss}} - 23950,\left[ \phi \right\rbrack_{\text{285}}^{\text{ss}} 0.]
+References
+
+[1] De Cavalcante, S. H., Giesbrecht, A. M., Gottlieb, O. R., Mourao, J. C. and Yoshida, M. (1978) Photochemistry 17, 983.
+[2] Aiba, C. J., Gottlieb, O. R., Yoshida, M., Mourao, J. C. and Gottlieb, H. E. (1976) Photochemistry 15, 1034.
+[3] Gottlieb, O. R., Mourao, J. C., Yoshida, M., Mascarenhas, Y. P., Rodrigues, M., Rosenstein, R. D. and Tomita, K. (1977) Photochemistry 16, 1003.
+[4] Gottlieb, O. R. (1977) Fortschr. Chem. Org. Naturst. 37, 1.
