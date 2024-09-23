@@ -1,31 +1,19 @@
-# NatUKE: Natural Product Knowledge Extraction Benchmark
+# ImpNatUKE: Improving Natural Product Knowledge Extraction from Academic Literature on NatUKE Benchmark
 
-Welcome to NatUKE! Here we present usability explanations an explanation of our benchmark and some results. We also provide a preview of the data used in the experiments and the access to said data.
+Welcome to ImpNatUKE! Here we present usability explanations based on the NatUKE benchmark as well as the additions we made and how to use them. 
 
-- [Usability](https://github.com/aksw/natuke#usability)
-- [Submodules](https://github.com/aksw/natuke#submodules)
-- [Benchmark](https://github.com/aksw/natuke#benchmark)
-- [Data](https://github.com/aksw/natuke#data)
-- [Models](https://github.com/aksw/natuke#models)
-- [Results](https://github.com/aksw/natuke#results)
-- [License](https://github.com/aksw/natuke#license)
-- [Wiki](https://github.com/aksw/natuke#wiki)
-
-## how to cite
-```
-@INPROCEEDINGS{icsc2023natuke,
-  author={Do Carmo, Paulo Viviurka and Marx, Edgard and Marcacini, Ricardo and Valli, Marilia and Silva e Silva, João Victor and Pilon, Alan},
-  booktitle={2023 IEEE 17th International Conference on Semantic Computing (ICSC)}, 
-  title={NatUKE: A Benchmark for Natural Product Knowledge Extraction from Academic Literature}, 
-  year={2023},
-  pages={199-203},
-  doi={10.1109/ICSC56153.2023.00039}
-}
-```
+- [Usability](https://github.com/aksw/ImpNatUKE#usability)
+- [Submodules](https://github.com/aksw/ImpNatUKE#submodules)
+- [Benchmark](https://github.com/aksw/ImpNatUKE#benchmark)
+- [Data](https://github.com/aksw/ImpNatUKE#data)
+- [Models](https://github.com/aksw/ImpNatUKE#models)
+- [Results](https://github.com/aksw/ImpNatUKE#results)
+- [License](https://github.com/aksw/ImpNatUKE#license)
+- [Wiki](https://github.com/aksw/ImpNatUKE#wiki)
 
 ## Usability
 
-NatUKE source code explanation for understanding, running and evaluating experiments.
+Original NatUKE source code explanation for understanding, running and evaluating experiments.
 
 ### Source code breakdown
 
@@ -44,6 +32,16 @@ Here we explain all the source code in the repository and the order in which to 
 9. ```metric_graphs.py```: with the metric results and execution times allows the generation of personalized graphs;
 * ```natuke_utils.py```: contains the source for the: methods; split algorithms; similar entity prediction; and metrics.
 * ```exploration.ipynb```: used to explore data, as for the quantities of each property.
+
+### ImpNatUKE source code breakdown
+
+Here we explain the source code changes from NatUKE and where they apply:
+1. ```clean_grobid.py```: cleans the processed ```.xml``` files outputted from GROBID (https://github.com/kermitt2/grobid) into ```.txt``` files that will be used to generate the embeddings. It substitutes ```clean_pdfs.ipynb``` and ```phrases_flow.py``` for the GROBID experiments;
+2. ```clean_nougat.py```: cleans the processed ```.md``` files outputted from Nougat (https://github.com/facebookresearch/nougat) into ```.txt``` files that will be used to generate the embeddings. It substitutes ```clean_pdfs.ipynb``` and ```phrases_flow.py``` for the Nougat experiments;
+3. ```old_processed_pdfs.py```: saves the PyMuPdf extractions into ```.txt``` files for usage in LLM embedding generation;
+4. ```hin_save_splits.py```: loads the embeddings file and connects it with the topics and other data to generate the networkx Graph and saves the train/test split files  on the BiKE challenge format. It substitutes ```hin_generation.ipynb``` for LLM experiments;
+5. ```hin_bert_splits.py```: loads the processed ```.txt``` files from either GROBID or Nougat and uses the original DistilBERT model to generate the embeddings before connecting it to the topics and other data to generate the networkx Graph and saving the train/test split files on the BiKE challenge format. It substitutes ```hin_generation.ipynb``` for BERT experiments with the new PDF file processors;
+6. ```tsne_plot.ipynb```: generates 2D tsne plots for the embedding models for a visual comparation of the reduced embeddings.
 
 ### Instalation and running
 
