@@ -124,20 +124,6 @@ Results from the original NatUKE benchmark are available at https://github.com/a
 
 Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model DistilBERT:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-7btt" colspan="14">DistilBERT</th>
@@ -295,20 +281,6 @@ Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language
 
 Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model llama-3.1.:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-7btt" colspan="14">llama-3.1</th>
@@ -466,20 +438,6 @@ Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language
 
 Results with the PDF file processors PyMuPdf, GROBID and Nougat for the language model Gemma 2:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-7btt" colspan="14">Gemma 2</th>
