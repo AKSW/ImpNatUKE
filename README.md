@@ -42,6 +42,7 @@ Here we explain the source code changes from NatUKE and where they apply:
 4. ```hin_save_splits.py```: loads the embeddings file and connects it with the topics and other data to generate the networkx Graph and saves the train/test split files  on the BiKE challenge format. It substitutes ```hin_generation.ipynb``` for LLM experiments;
 5. ```hin_bert_splits.py```: loads the processed ```.txt``` files from either GROBID or Nougat and uses the original DistilBERT model to generate the embeddings before connecting it to the topics and other data to generate the networkx Graph and saving the train/test split files on the BiKE challenge format. It substitutes ```hin_generation.ipynb``` for BERT experiments with the new PDF file processors;
 6. ```tsne_plot.ipynb```: generates 2D tsne plots for the embedding models for a visual comparation of the reduced embeddings.
+7. ```generate_embs_llms.ipynb```: code to generate LLM embeddings for txts.
 
 ### Instalation and running
 
@@ -54,6 +55,7 @@ Install the requirements:
 cd natuke
 conda activate [name]
 pip install -r requirements.txt
+pip install ollama
 ```
 
 **GraphEmbeddings**
